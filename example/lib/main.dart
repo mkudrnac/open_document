@@ -46,16 +46,8 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     String filePath;
 
-    //
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // "https://file-examples-com.github.io/uploads/2017/02/file_example_XLS_5000.xls";
-    final url =
-        "https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_500_kB.pdf";
-    //"https://file-examples-com.github.io/uploads/2017/02/file_example_XLS_5000.xls";
-    //  "https://file-examples-com.github.io/uploads/2017/02/zip_10MB.zip";
-//
+    final url = "https://www.orimi.com/pdf-test.pdf";
     final name = await OpenDocument.getNameFile(url: url);
-
     final path = await OpenDocument.getPathDocument(folderName: "example");
     filePath = "$path/$name";
 
